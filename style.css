@@ -1,0 +1,137 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+width: 100%;
+height: 100vh;
+padding: 20px;
+background: linear-gradient(180deg, #8852FC 0%, rgba(103, 14, 247, 0) 100%);
+}
+
+.todoapp{
+width: 100%;
+max-width: 450px;
+margin: 100px auto 20px;
+padding: 40px 30px 70px;
+background: #FFFFFF;
+border-radius: 33px;
+justify-content: space-evenly;
+}
+.todoapp h2{
+    color: #240468;
+    font-size: 200%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todoapp ul {
+    list-style: none;
+    padding: 30px 8px 8px 5px;
+    font-size: 17px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+  }
+  
+  .todoapp li {
+    position: relative;
+    padding-left: 50px; /* Adjust the left padding to create space for the pseudo-element */
+    padding-bottom: 12px;
+  }
+  
+  .todoapp li::before {
+    content: '';
+    border-radius: 50%;
+    height: 28px;
+    width: 28px;
+    background-image: url(check.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-80%);
+  }
+
+  .todoapp ul li.checked{
+    color: grey;
+    text-decoration: line-through;
+  }
+  .todoapp ul li.checked::before{
+    background-image: url(unchecked.png);
+  }
+
+.todoapp li span{
+    position: absolute;
+    right: 0px;
+    height: 40px;
+    width: 40px;
+    font-size: 22px;
+    line-height: 40px;
+    top: 5px;
+    color: darkgrey;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    transform: translateY(-45%);
+}
+.todoapp li span:hover{
+    background-color: rgb(243, 221, 252);
+}
+
+.todoapp h2 img{
+    width: 40px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: aliceblue;
+    border-radius: 30px;
+    /*padding-bottom: 20px;*/
+
+}
+#input-text{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+#click-button{
+    background-color: #8852FC;    
+    color: #FFFFFF;
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+#click-button:hover{
+    background-color: #240468;
+}
+/*button{
+    display: flex;
+    width: 211px;
+    height: 89px;  
+    background: #8852FC;
+    border-radius: 44.5px;
+    align-items: flex-end;
+
+}*/
+
+/*.text-box{
+position: absolute;
+width: 602px;
+height: 89px;
+background: #F1ECEC;
+border-radius: 44.5px;
+}*/
